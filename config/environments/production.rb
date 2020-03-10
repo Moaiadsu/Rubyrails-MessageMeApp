@@ -93,4 +93,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   # config.action_cable.disable_request_forgery_protection = true
   # config.action_cable.allowed_request_origins = ["www.thisisapp.com"]
+
+  config.middleware.use ChatActionCable
+  config.web_socket_server_url = "wss://your-heroku-app.herokuapp.com/"
+
 end
